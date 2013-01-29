@@ -9,7 +9,7 @@
   ];
 
   // The HTML and CSS to insert
-  var html = "<div id='data-ac-uk-bar'>(logo) data.ac.uk Network<span onclick='el = document.getElementById( \"data-ac-uk-sites\" ); if( el.style.display == \"block\" ) { el.style.display = \"none\"; } else { el.style.display = \"block\"; }' id='data-ac-uk-menu-toggle'>view other data.ac.uk sites</span></div> <div id='data-ac-uk-sites'>";
+  var html = "<div id='data-ac-uk-bar'>(logo) data.ac.uk Network<span id='data-ac-uk-menu-toggle'>view other data.ac.uk sites</span></div> <div id='data-ac-uk-sites'>";
 
   for( i in menu )
   {
@@ -33,6 +33,13 @@
   t.className = "toolbar";
   t.innerHTML = html;
   b.insertBefore(t, b.firstChild);
+
+  // Handle menu toggle
+  mt = d.getElementById('data-ac-uk-menu-toggle');
+  ml = d.getElementById('data-ac-uk-sites');
+  mt.onclick = function(){
+    ml.style.display = (ml.style.display == 'block') ? 'none' : 'block';
+  };
 
 })(document);
 
