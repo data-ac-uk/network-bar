@@ -1,11 +1,11 @@
 (function(d){
 
   var menu = [
-	[ "http://www.data.ac.uk/", "data.ac.uk Homepage" ],
-	[ "http://learning-provider.data.ac.uk/", "Learning Providers" ],
-	[ "http://cpv.data.ac.uk/", "CPV Codes" ],
-	[ "http://academic-session.data.ac.uk/", "Academic Sesssions" ],
-	[ "http://hub.data.ac.uk/", "Open Data Hub" ]
+    { title: "data.ac.uk Homepage", url: "http://www.data.ac.uk/" },
+    { title: "Learning Providers",  url: "http://learning-provider.data.ac.uk/"},
+    { title: "CPV Codes",           url: "http://cpv.data.ac.uk/" },
+    { title: "Academic Sessions",   url: "http://academic-session.data.ac.uk/" },
+    { title: "Open Data Hub",       url: "http://hub.data.ac.uk/" }
   ];
 
   // The HTML and CSS to insert
@@ -13,7 +13,7 @@
 
   for( i in menu )
   {
-    html += "<div class='data-ac-uk-bar-menu-item'><a href='"+menu[i][0]+"'>"+menu[i][1]+"</a></div>";
+    html += "<div class='data-ac-uk-bar-menu-item'><a href='"+menu[i].url+"'>"+menu[i].title+"</a></div>";
   }
   html += "</div> </div>";
 
