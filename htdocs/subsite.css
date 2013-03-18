@@ -105,9 +105,11 @@ This is the default CSS for a data.ac.uk sub-site. It uses the skeleton framewor
 
 /* #Links
 ================================================== */
+/*
 	a, a:visited { color: #333; text-decoration: underline; outline: 0; }
 	a:hover, a:focus { color: #000; }
 	p a, p a:visited { line-height: inherit; }
+*/
 
 
 /* #Lists
@@ -694,7 +696,7 @@ body, button, input, select, textarea {
 	line-height: 18px;
 	text-align: left;
 	font-family: Helvetica, Arial, sans-serif;
-	color: #666;
+	color: #333;
 	}
 
 p {
@@ -714,8 +716,11 @@ p {
 	footer {
 	font-size: 0.9em;
 	line-height: 14px;
-	margin: 0;
+	margin: 2em 0 0 0;
+	border-top: solid 1px #a1a1a1;
+	text-align: right;
 	color: #a1a1a1;
+	padding: 0.5em;
 	}
 	
 	body.front footer {
@@ -841,7 +846,7 @@ hr {
 	
 a { color: #417CA5;	text-decoration: none; }
 
-	a:hover { color: #417CA5; text-decoration: underline; }
+a:hover { color: #417CA5; text-decoration: underline; }
 	
 div.views-field-title a {
 	display: block;
@@ -1514,3 +1519,12 @@ div#main div.resizable-textarea .grippie { display: none; visibility: hidden; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }	
 
+
+.code { 
+	border: dashed 1px #ccc;
+	white-space: pre;
+	padding: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	background-color: #eef;
+}
