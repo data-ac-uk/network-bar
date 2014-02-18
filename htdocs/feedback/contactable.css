@@ -1,0 +1,196 @@
+#contactable_inner {
+	background-image:url(images/feedback.png?7);
+	color:#FFFFFF;
+	cursor:pointer;
+	height:102px;
+	left:0;
+	margin-left:-5px; 
+	*margin-left:-5px; 
+	overflow:hidden;
+	position:fixed;
+	*position:absolute;
+	text-indent:-100000px;
+	top:75px;
+	*margin-top:10px;
+	width:44px;
+	z-index:9999999;
+}
+
+#contactable #contactForm {
+	background-color:#5289ba;
+	background: url(images/pattern.png) bottom left repeat-x #4d88bc;
+	border:2px solid #1a3a65;
+	color:#FFFFFF  !important;
+	
+	font-family: Helvetica, Arial !important;
+	font-size:17px !important;
+	line-height: auto !important;
+	
+	padding-bottom: 30px;
+	left:0;
+	margin-left:-400px;
+	*margin-left:-434px;
+	margin-top:-160px;
+	overflow:hidden;
+	padding-left:30px;
+	position:fixed;
+	top:180px;
+	width:360px;
+	*width:394px;
+	z-index:9999998;
+}
+
+#contactable form#contactForm h1{
+	color:white;
+	font-weight: bold;
+	display:block;
+	margin: 0px;
+	padding: 0px;
+}
+
+#contactable form#contactForm input, 
+#contactable form#contactForm textarea {
+	background:#FFFFFF none repeat scroll 0 0;
+	outline-style:none;
+	outline-width:medium;
+	width:313px;
+	padding:5px;
+	border:1px solid #dfdfdf;
+	font-family: Helvetica, Arial;
+	font-size:1em;
+	margin-top:0px !important;
+}
+#contactable form#contactForm textarea {
+	font-size:0.8em;
+}
+#contactable form#contactForm .submit {
+	background: #1a3a65 none repeat scroll 0 0;
+	outline-style:none;
+	outline-width:medium;
+	width:325px;
+	padding:5px;
+	border:3px solid #1a3a65;
+	outline-color:-moz-use-text-color;
+	font-family: georgia;
+	font-size:1em;
+	cursor:pointer;
+	color:#FFF;
+	text-align: center;
+	text-transform:uppercase;
+	font-weight:bolder;
+	font-family:Helvetica;
+	margin-top:10px;
+}
+
+#contactable form#contactForm .submit:hover{
+	background: #5289ba none repeat scroll 0 0;
+	
+}
+
+
+#contactable form#contactForm p {
+	width:325px;
+	font-size:0.9em;
+	padding: 0px;
+	margin: 10px 0px 0px;
+}
+
+#contactable form#contactForm .disclaimer {
+	*margin-left:20px;
+	text-align:center;
+}
+
+#contactable #contactForm .red {
+	color:	#e80000;
+}
+
+#contactable #overlay {
+	background-color: rgba(100,100,100,0.8);
+	display:none;
+	height:100%;
+	left:0;
+	margin:0;
+	padding:0;
+	position:fixed;
+	top:0;
+	width:100%;
+	z-index:9999997;
+} 
+#contactable label.error { color: #e24e4e; padding: -4px 0px 10px; }
+
+#contactable #name.error ,
+#contactable #email.error,
+#contactable #comment.error,
+#contactable #message.error,
+#contactable #captcha.error { background-color: #eebcbc; }
+
+#contactable form#contactForm label{
+	padding: 0px 0px;
+	*margin-left:20px;
+	float: none;
+	clear: none;
+}
+
+#contactable form#contactForm #loading {
+	background: url(images/ajax-loader.gif) no-repeat;
+	width:55px;
+	height:55px;
+	margin: 100px 145px;
+	display:none;
+}
+
+#contactable #callback {
+	font-family: georgia;
+	font-size:1.1em;
+	color: #FFF;
+	width:325px;
+	margin: 100px 0px;	
+	display:none;
+	text-align:center;
+}
+
+
+#contactable .holder {
+	margin:0 auto;
+	*margin-left:20px;
+	padding-top:20px;	
+}
+
+#contactable .emo{
+	background: white;
+	padding: 5px 0px 0px 0px;
+	text-align: center;
+	margin-top:0px !important;
+	margin-bottom:10px;
+	display: block;
+}
+
+#contactable .emo img{
+	width: 30px;
+	margin: 0px 10px;
+	opacity: 0.4;
+	cursor:pointer;
+}
+#contactable .emo img:hover{
+	opacity: 0.7;
+}
+#contactable .emo img.selected{
+	opacity: 1; 
+}
+
+#contactable #exp_radio{
+	display: none;
+}
+
+#captcha {
+	width: 150px !important;
+}
+#captcha_img {
+	float: right ;
+}
+#captcha_change {
+	float:right;
+	margin-right: 12px;
+	cursor: pointer;
+	color:white;
+}

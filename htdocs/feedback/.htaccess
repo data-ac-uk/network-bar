@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteRule ^jquery.contactable.min.js /feedback/jquery.contactable.php [L,QSA]
+RewriteRule ^endpoint /feedback/theendpoint.php [L,QSA]
