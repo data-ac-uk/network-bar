@@ -129,6 +129,7 @@
 	*margin-left:20px;
 	float: none;
 	clear: none;
+	display: inline;
 }
 
 #contactable form#contactForm #loading {
