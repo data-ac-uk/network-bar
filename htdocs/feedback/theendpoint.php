@@ -57,7 +57,10 @@ $email = <<<END
 
 END;
 
-mail ( "andy@data.ac.uk", "WEBSITE FEEDBACK", $email);
+$headers = 'From: website@data.ac.uk' . "\r\n" .
+    'X-Mailer: PHP/' . phpversion();
+
+mail ( "andy@data.ac.uk", "WEBSITE FEEDBACK", $email, $headers);
 
 $jsona = array( 'response' => 'success');
 
@@ -74,42 +77,3 @@ print( ( $jsonp ) ? $pre . $json . $post : $json );
 
 
 exit();
-echo 'var contactable_result = "success";';
-
-
-exit();
-
-include("admin/config.php");
-include("admin/functions.php");
-
-if (empty($_SESSION['captcha']) || trim(strtolower($_REQUEST['captcha'])) != $_SESSION['captcha']) {
-	echo 'var contactable_result = "captcha";';
-}else{
-
-$incoms = array(
-	"productKey"=>array("feed_key", true),
-	"name"=>array("feed_name", true),
-	"email"=>array("feed_email", true),
-	"message"=>array("feed_msg", true),
-	"exp"=>array("feed_exp", false),
-	);
-
-foreach($incoms as $k=>$v){
-	if($v[1] && !$_REQUEST[$k])	die('var contactable_result = "error";');
-	$input[$v[0]] = $_REQUEST[$k];
-}
-
-$input['feed_ip'] = $_SERVER['REMOTE_ADDR'];
-$input['feed_host'] = gethostbyaddr($_SERVER['REMOTE_ADDR']);
-$input['feed_agent'] = $_SERVER['HTTP_USER_AGENT'];
-$input['feed_referer'] = $_SERVER['HTTP_REFERER'];
-
-lib_mysqli_insert("notes", $input, array("feed_time"=>"NOW()"));
-echo 'var contactable_result = "success";';
-}
-
-
-
-
-
-?>
