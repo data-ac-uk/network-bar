@@ -195,3 +195,9 @@
 	cursor: pointer;
 	color:white;
 }
+
+@media only screen and (max-width: 840px) {
+	#contactable_inner {
+		background-image:url(images/feedback_sm.png?12);
+	}
+}
