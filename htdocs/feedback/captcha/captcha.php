@@ -143,7 +143,7 @@ class SimpleCaptcha {
      * - maxSize: max font size
      */
     public $fonts = array(
-        'Antykwa'  => array('spacing' => -3, 'minSize' => 27, 'maxSize' => 30, 'font' => 'AntykwaBold.ttf'),
+        'Antykwa'  => array('spacing' => -2, 'minSize' => 27, 'maxSize' => 30, 'font' => 'AntykwaBold.ttf'),
         'Candice'  => array('spacing' =>-1.5,'minSize' => 28, 'maxSize' => 31, 'font' => 'Candice.ttf'),
         'DingDong' => array('spacing' => -2, 'minSize' => 24, 'maxSize' => 30, 'font' => 'Ding-DongDaddyO.ttf'),
         'Duality'  => array('spacing' => -2, 'minSize' => 30, 'maxSize' => 38, 'font' => 'Duality.ttf'),
@@ -151,14 +151,14 @@ class SimpleCaptcha {
         'Jura'     => array('spacing' => -2, 'minSize' => 28, 'maxSize' => 32, 'font' => 'Jura.ttf'),
         'StayPuft' => array('spacing' =>-1.5,'minSize' => 28, 'maxSize' => 32, 'font' => 'StayPuft.ttf'),
         'Times'    => array('spacing' => -2, 'minSize' => 28, 'maxSize' => 34, 'font' => 'TimesNewRomanBold.ttf'),
-        'VeraSans' => array('spacing' => -1, 'minSize' => 20, 'maxSize' => 28, 'font' => 'VeraSansBold.ttf'),
+       	'VeraSans' => array('spacing' => -1, 'minSize' => 20, 'maxSize' => 28, 'font' => 'VeraSansBold.ttf'),
     );
 
     /** Wave configuracion in X and Y axes */
     public $Yperiod    = 12;
-    public $Yamplitude = 14;
+    public $Yamplitude = 1;
     public $Xperiod    = 11;
-    public $Xamplitude = 5;
+    public $Xamplitude = 1;
 
     /** letter rotation clockwise */
     public $maxRotation = 8;

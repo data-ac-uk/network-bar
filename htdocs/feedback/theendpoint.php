@@ -60,7 +60,7 @@ END;
 $headers = 'From: website@data.ac.uk' . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
-mail ( "andy@data.ac.uk", "WEBSITE FEEDBACK", $email, $headers);
+mail ( "feedback@data.ac.uk", "WEBSITE FEEDBACK", $email, $headers);
 
 $jsona = array( 'response' => 'success');
 
