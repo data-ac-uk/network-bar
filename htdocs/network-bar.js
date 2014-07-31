@@ -6,11 +6,12 @@
     { title: "CPV Codes",           url: "http://cpv.data.ac.uk/" },
     { title: "Academic Sessions",   url: "http://academic-session.data.ac.uk/" },
     { title: "Open Data Hub",       url: "http://hub.data.ac.uk/" },
-    { title: "OPDs",       url: "http://opd.data.ac.uk/" }
+    { title: "Equipment Sharing",   url: "http://equipment.data.ac.uk/" },
+    { title: "OPDs",       			url: "http://opd.data.ac.uk/" }
   ];
 
   // The HTML and CSS to inserr
-  var html = "<div id='data-ac-uk-bar'><div id='data-ac-uk-bar-inner'><a href='http://www.data.ac.uk/'><img src='http://network-bar.data.ac.uk/images/bar-data-logo.png' alt='data.ac.uk' style='width:80px;height:20px;vertical-align:middle' /></a><div id='data-ac-uk-menu-toggle'><div id='data-ac-uk-menu-toggle-inner'>more data.ac.uk sites</div></div></div> <div id='data-ac-uk-sites'>";
+  var html = "<div id='data-ac-uk-bar' class='noprint'><div id='data-ac-uk-bar-inner'><a href='http://www.data.ac.uk/'><img src='http://network-bar.data.ac.uk/images/bar-data-logo.png' alt='data.ac.uk' style='width:80px;height:20px;vertical-align:middle' /></a><div id='data-ac-uk-menu-toggle'><div id='data-ac-uk-menu-toggle-inner'>more data.ac.uk sites</div></div></div> <div id='data-ac-uk-sites'>";
 
   for( i in menu )
   {
@@ -35,7 +36,7 @@
   t.className = "toolbar";
   t.innerHTML = html;
   b.insertBefore(t, b.firstChild);
-  b.style.paddingTop = "23px";
+  //b.style.paddingTop = "23px";
 
   // Handle menu toggle
   mt = d.getElementById('data-ac-uk-menu-toggle-inner');
