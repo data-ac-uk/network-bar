@@ -5,7 +5,8 @@
     { title: "Learning Providers",  url: "http://learning-provider.data.ac.uk/"},
     { title: "CPV Codes",           url: "http://cpv.data.ac.uk/" },
     { title: "Academic Sessions",   url: "http://academic-session.data.ac.uk/" },
-    { title: "Open Data Hub",       url: "http://hub.data.ac.uk/" }
+    { title: "Open Data Hub",       url: "http://hub.data.ac.uk/" },
+    { title: "OPDs",       url: "http://opd.data.ac.uk/" }
   ];
 
   // The HTML and CSS to inserr
@@ -61,6 +62,24 @@
       ml.style.display = 'none';
       mask.style.display = 'none';
   };
+  
+  var taged = d.getElementsByClassName('tag');
+  
+  for (var i = 0; i < taged.length; ++i) {
+      var item = taged[i];  
+	  var classes = item.classList;
+	  var tag = false;
+	  var vtags = ['demo','alpha','beta'];
+	  for (var j = 0; j < classes.length; ++j) {
+		  if(vtags.indexOf(classes[j])>=0){
+			  var tag = classes[j];
+		  }
+	  }	 
+	  if(tag){
+		  item.innerHTML =  item.innerHTML + ' <img src="http://network-bar.data.ac.uk/images/tags/' + tag + '.png" class="tag_icon"/>';
+	  }
+  }
+  
 
 })(document);
 

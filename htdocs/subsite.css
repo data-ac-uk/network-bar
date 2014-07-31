@@ -788,7 +788,6 @@ h1 {
 	color: #193965;
 	}
 	
-	
 h2 {
 	padding: 0 0 15px 0;
 	font-size: 22px;
@@ -1560,4 +1559,10 @@ div#main div.resizable-textarea .grippie { display: none; visibility: hidden; }
 	margin-top: 1em;
 	margin-bottom: 1em;
 	background-color: #eef;
+}
+
+
+.tag_icon {
+	height: 16px;
+	vertical-align: top;
 }
