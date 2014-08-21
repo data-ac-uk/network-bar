@@ -1584,3 +1584,39 @@ div#main div.resizable-textarea .grippie { display: none; visibility: hidden; }
 		display:none;
 	}
 }
+
+
+a.fileicon{
+	background: url('/resources/images/fileicons/blank.png') no-repeat left center;
+	font-weight: bold;
+	padding: 2px 2px 2px 18px;
+}
+
+a.fileicon.csv{
+	background-image: url('/images/fileicons/csv.png');
+}
+a.fileicon.json{
+	background-image: url('/images/fileicons/json.png');
+}
+a.fileicon.rdf{
+	background-image: url('/images/fileicons/rdf.png');
+}
+
+.sidebox{
+	border-radius: 5px;
+	border: 1px solid #193965;
+	padding: 5px;
+	margin-bottom:10px;
+}
+
+.sidebox h3{
+	margin-top: 0px;
+}
+.sidebox img{
+	
+	max-width: 100%;
+}
+
+.smallp{
+	margin-bottom: 0.3em;
+}
