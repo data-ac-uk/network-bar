@@ -1611,9 +1611,11 @@ a.fileicon.rdf{
 
 .sidebox h3{
 	margin-top: 0px;
+	margin-top: 0.3em;
+	margin-bottom: 0.2em;
+	padding:0px;
 }
 .sidebox img{
-	
 	max-width: 100%;
 }
 
