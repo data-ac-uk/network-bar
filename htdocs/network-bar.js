@@ -2,14 +2,15 @@
 
   var menu = [
     { title: "data.ac.uk Homepage", url: "http://www.data.ac.uk/" },
+    { title: "Equipment Sharing",   url: "http://equipment.data.ac.uk/" },
+    { title: "OPDs",       			url: "http://opd.data.ac.uk/" },
+    { title: "Observatory",       	url: "http://observatory.data.ac.uk/" },
     { title: "Learning Providers",  url: "http://learning-provider.data.ac.uk/"},
     { title: "CPV Codes",           url: "http://cpv.data.ac.uk/" },
     { title: "Academic Sessions",   url: "http://academic-session.data.ac.uk/" },
     { title: "Open Data Hub",       url: "http://hub.data.ac.uk/" },
-    { title: "Equipment Sharing",   url: "http://equipment.data.ac.uk/" },
-    { title: "OPDs",       			url: "http://opd.data.ac.uk/" }
+    { title: "RSS News Feed",		url: "http://rss.data.ac.uk/" }
   ];
-
   // The HTML and CSS to inserr
   var html = "<div id='data-ac-uk-bar' class='noprint'><div id='data-ac-uk-bar-inner'><a href='http://www.data.ac.uk/'><img src='http://network-bar.data.ac.uk/images/bar-data-logo.png' alt='data.ac.uk' style='width:80px;height:20px;vertical-align:middle' /></a><div id='data-ac-uk-menu-toggle'><div id='data-ac-uk-menu-toggle-inner'>more data.ac.uk sites</div></div></div> <div id='data-ac-uk-sites'>";
 
