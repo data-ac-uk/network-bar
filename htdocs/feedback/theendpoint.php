@@ -57,7 +57,7 @@ $email = <<<END
 
 END;
 
-$headers = 'From: website@data.ac.uk' . "\r\n" .
+$headers = 'From: website@data.ac.uk' . "\r\n" ."Sender: website@data.ac.uk" . "\r\n" ."Reply-To: {$_REQUEST[$k]}" . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
 
 mail ( "feedback@data.ac.uk", "WEBSITE FEEDBACK", $email, $headers);
