@@ -57,7 +57,7 @@ $email = <<<END
 
 END;
 
-$emailfrom = preg_replace("/[^A-Za-z0-9]/",'',$_REQUEST['name'])." <".filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL).">";  
+$emailfrom = preg_replace("/[^A-Za-z0-9\ ]/",'',$_REQUEST['name'])." <".filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL).">";  
 
 $headers = 'From: website@data.ac.uk' . "\r\n" ."Sender: website@data.ac.uk" . "\r\n" ."Reply-To: {$emailfrom}" . "\r\n" .
     'X-Mailer: PHP/' . phpversion();
