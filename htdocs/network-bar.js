@@ -12,16 +12,23 @@
     { title: "RSS News Feed",		url: "http://rss.data.ac.uk/" }
   ];
   // The HTML and CSS to inserr
-  var html = "<div id='data-ac-uk-bar' class='noprint'><div id='data-ac-uk-bar-inner'><a href='http://www.data.ac.uk/'><img src='http://network-bar.data.ac.uk/images/bar-data-logo.png' alt='data.ac.uk' style='width:80px;height:20px;vertical-align:middle' /></a><div id='data-ac-uk-menu-toggle'><div id='data-ac-uk-menu-toggle-inner'>more data.ac.uk sites</div></div></div> <div id='data-ac-uk-sites'>";
+  var html = "<div id='data-ac-uk-bar' class='noprint'><div id='data-ac-uk-bar-inner'><a href='http://www.data.ac.uk/'><img src='//network-bar.data.ac.uk/images/bar-data-logo.png' alt='data.ac.uk' style='width:80px;height:20px;vertical-align:middle' /></a>";
+  if(location.hostname!='equipment.data.ac.uk'){
+	  html += "<div id='data-ac-uk-eq'><a href='http://equipment.data.ac.uk/'><img src='//network-bar.data.ac.uk/images/equipment.data.png' alt='equipment.data' style='height:20px;vertical-align:middle' /></div>";
+	}	
+  html +="<div id='data-ac-uk-menu-toggle'><div id='data-ac-uk-menu-toggle-inner'>other data.ac.uk sites</div>";
+  html += "</div></div> <div id='data-ac-uk-sites'>";
 
   for( i in menu )
   {
     html += "<div class='data-ac-uk-bar-menu-item'><a href='"+menu[i].url+"'>"+menu[i].title+"</a></div>";
   }
-  html += "</div> </div></div>";
+  html += "</div>";
+ 
+  html += "</div> </div>";
   html += "<div id='data-ac-uk-overlay-mask'></div>";
 //#121x25
-  var css  = "#data-ac-uk-bar { position: absolute; top:0; left:0; width:100%; z-index: 2002; box-shadow: 0px 1px 2px rgba(0,0,0,0.7);} #data-ac-uk-bar-inner{ font-size:14px; height: 20px; padding: 4px 20px 4px 20px; background-color: #ccc; color: #333; } #data-ac-uk-sites .data-ac-uk-bar-menu-item { border: solid 1px #666; } #data-ac-uk-sites { background-color: #ccc; width: 200px; position: absolute;top:25px; right:20px; z-index: 2003; display:none; box-shadow: 2px 2px 2px rgba(0,0,0,0.7);} #data-ac-uk-sites a { width: 100%; display: block; color: #333; padding: 3px 3px 3px 13px; text-decoration: none; } #data-ac-uk-menu-toggle { position: absolute; top: 4px; right:20px; width: 200px; height: 20px; cursor:pointer;} #data-ac-uk-menu-toggle-inner { border: solid 1px #999; background-color: #bbb; font-size: 12px; padding: 0px 10px 0px 10px;}  #data-ac-uk-overlay-mask { width: 100%; height: 100%; background-color: transparent; display: none; position: fixed; top:0; left:0; z-index:2001 } .data-ac-uk-bar-menu-item:hover, #data-ac-uk-menu-toggle-inner:hover { background-color: #eef; } ";
+  var css  = "#data-ac-uk-bar { position: absolute; top:0; left:0; width:100%; z-index: 2002; box-shadow: 0px 1px 2px rgba(0,0,0,0.7);} #data-ac-uk-bar-inner{ font-size:14px; height: 20px; padding: 4px 20px 4px 20px; background-color: #ccc; color: #333; } #data-ac-uk-sites .data-ac-uk-bar-menu-item { border: solid 1px #666; } #data-ac-uk-sites { background-color: #ccc; width: 200px; position: absolute;top:25px; right:20px; z-index: 2003; display:none; box-shadow: 2px 2px 2px rgba(0,0,0,0.7);} #data-ac-uk-sites a { width: 100%; display: block; color: #333; padding: 3px 3px 3px 13px; text-decoration: none; } #data-ac-uk-menu-toggle { position: absolute; top: 4px; right:20px; width: 200px; height: 20px; cursor:pointer;} #data-ac-uk-menu-toggle-inner { border: solid 1px #999; background-color: #bbb; font-size: 12px; padding: 0px 10px 0px 10px;}  #data-ac-uk-overlay-mask { width: 100%; height: 100%; background-color: transparent; display: none; position: fixed; top:0; left:0; z-index:2001 } .data-ac-uk-bar-menu-item:hover, #data-ac-uk-menu-toggle-inner:hover { background-color: #eef; } #data-ac-uk-eq {  position: absolute; top: 5px; right:230px;";
 
   // Append styles in to head
   var h = d.getElementsByTagName('head')[0];
